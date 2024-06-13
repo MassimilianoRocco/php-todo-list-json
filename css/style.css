@@ -25,33 +25,73 @@ header{
     color: white;
 }
 
-.task_Container{
-    height: 90vh;
-    padding: 5rem 0 0 5rem;
-}
-.task_box{
+.tasks_Container{
     width: 300px;
-    height: 400px;
+    height:400px;
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+.tasks_box{
+    height: 100%;
     padding: 1rem;
     color: white;
     border-radius: 10px;
     box-shadow: black 0 0 5px 5px ;
-    overflow: auto;
-    transition: all 0.5s ease-in-out;
-}
-.task_box>h2{
-    margin-bottom: 1rem;
-}
+    
+    }
 
-ul{
+.list_box{
+    height: 80%;
+    transition: all 0.5s ease-in-out;
+    overflow: auto;
+}
+.list_box>h2{
+    margin-bottom: 1rem;
+    }
+        
+        
+.list_box>ul{
     margin-left: 1rem;
     
 }
-.task_box>ul>li{
+.list_box>ul>li{
     transition: all 0.5s ease-in-out;
     cursor: pointer;
     margin-bottom: 0.5rem;
+    max-width: 80%;
 }
-.task_box>ul>li:hover{
+.list_box>ul>li:hover{
     transform: translateX(10px);
 }
+
+.tasks_Container .form_box{
+    height: 20%;
+    padding: 1rem 0 ;
+}
+
+.form_box>input{
+    border-radius: 5px;
+    padding: 2px 6px;
+    background: #A05740;
+    color: white;
+    box-shadow: black 0 0 5px 2px ;
+}
+.form_box>input::placeholder{
+    color: white;
+}
+
+.addTask_button{
+    margin-top: 5px;
+    padding: 2px 10px;
+    border-radius: 5px;
+    background-color: #A05740;
+    box-shadow: black 0 0 5px 2px ;
+    color: white;
+    text-align: center;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+   }
+   .addTask_button:hover{
+    background-color: #0E4250;
+   }
