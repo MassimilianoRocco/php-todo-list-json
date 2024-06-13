@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.completed_color{
+    color: rgb(115, 199, 115);
+}
+.notCompleted_color{
+    color: red;
+}
+
+
+.container{
+    height: 100vh;
+    background-image: url("https://cdn.pixabay.com/photo/2024/04/04/03/08/ai-generated-8674235_1280.png");
+    background-size: cover;
+    background-position: 50%;
+}
+
+header{
+    padding-left: 0.5rem;
+    height: 10vh;
+    color: white;
+}
+
+.task_Container{
+    height: 90vh;
+    padding: 5rem 0 0 5rem;
+}
+.task_box{
+    width: 300px;
+    height: 400px;
+    padding: 1rem;
+    color: white;
+    border-radius: 10px;
+    box-shadow: black 0 0 5px 5px ;
+    overflow: auto;
+    transition: all 0.5s ease-in-out;
+}
+.task_box>h2{
+    margin-bottom: 1rem;
+}
+
+ul{
+    margin-left: 1rem;
+    
+}
+.task_box>ul>li{
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+.task_box>ul>li:hover{
+    transform: translateX(10px);
+}
