@@ -32,8 +32,10 @@
                     </div>
 
                     <div class="form_box">
-                        <input type="text" v-model="this.userNewTask" name="newTask" id="taskInput" placeholder="Insert a new task...">
+                        <input type="text" v-model="userNewTask" name="newTask" id="taskInput" placeholder="Insert a new task...">
                         <button type="button" @click="addNewTask()" class="addTask_button">Add to Task List</button>
+
+                        <!-- disabled="true" tra le proprietà per gestire con un if la possibilità di avere il pulsante add attivo o meno in base ai dati che l'utente inserisce -->
                     </div>
                 </div>
                 
