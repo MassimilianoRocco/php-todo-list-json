@@ -10,6 +10,12 @@ if( isset($_POST["name"]) && isset($_POST["completed"])) {
     //converto il json in un array associativo php
     $tasks = json_decode($fileContent, true);
 
+    if($_POST["completed"]=="false"){
+        $_POST["completed"] = false;
+    }
+    else{
+        $_POST["completed"] = true;
+    }
     //creo un nuovo task in php
     $newTask = [
         "name" => $_POST["name"],

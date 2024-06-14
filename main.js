@@ -20,12 +20,11 @@ createApp({
     },
 
     addNewTask(){
-      const userTask = [
+      const userTask = 
         {
           name: this.userNewTask,
           completed: false
         }
-      ]
 
       axios.post(this.apiUrl, userTask, this.postRequestConfig).then(results => {
         console.log("Risultati: ", results.data);
