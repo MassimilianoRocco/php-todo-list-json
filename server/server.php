@@ -10,6 +10,7 @@ if( isset($_POST["name"]) && isset($_POST["completed"])) {
     //converto il json in un array associativo php
     $tasks = json_decode($fileContent, true);
 
+    // Siccome in php completed mi arriva come stringa "false", farò il controllo per restituirlo boolean
     if($_POST["completed"]=="false"){
         $_POST["completed"] = false;
     }
@@ -34,6 +35,17 @@ if( isset($_POST["name"]) && isset($_POST["completed"])) {
     
 }
 
+elseif(isset($_POST["id"])){
+    var_dump($_POST["id"]);
+    $index = (int)$_POST["id"];
+    var_dump($index);
+
+    $tasks = json_decode($fileContent, true);
+    array_splice($tasks, $index, 1);
+    
+    $fileContent = json_encode($tasks);
+    file_put_contents("../dati.json", $fileContent);
+}
 
 header('Content-Type: application/json');
 

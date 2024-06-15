@@ -7,6 +7,7 @@ createApp({
         userNewTask:"",
 
         apiUrl: "./server/server.php",
+        cancelUrl:"./server/cancel.php",
         postRequestConfig: {
           headers: {
             'Content-Type': 'multipart/form-data'
@@ -36,8 +37,14 @@ createApp({
       this.userNewTask = "";
     },
 
-    cancelTask(index){
-      this.tasks.splice(index,1);
+    cancelTask(indexToCancel){
+      const index = { id: indexToCancel};
+      axios.post(this.apiUrl, index, this.postRequestConfig).then(results => {
+        console.log("Risultati: ", results.data);
+        // this.tasks = results.data;
+      });
+
+      this.getTaskList();
     },
 
 
