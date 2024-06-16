@@ -37,7 +37,7 @@ header{
     color: white;
     border-radius: 10px;
     box-shadow: black 0 0 5px 5px ;
-    
+    position: relative;
     }
 
 .list_box{
@@ -92,6 +92,42 @@ header{
     cursor: pointer;
     transition: all 0.2s ease-in-out;
    }
-   .addTask_button:hover{
+.addTask_button:hover{
     background-color: #0E4250;
-   }
+}
+
+.pencil_icon{
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.abs_modify_box{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.display_Off{
+    display: none;
+}
+.display_On{
+    display: block;
+}
+.opacity_mid{
+    opacity: 0.5;
+}
+.opacity_Off{
+    opacity: unset;
+}
+
+.modifyInput{
+    border-radius: 5px;
+    padding: 2px 6px;
+    background: #A05740;
+    color: white;
+    box-shadow: black 0 0 5px 2px ;
+}
+.abs_modify_box>input::placeholder{
+    color: white;
+}
