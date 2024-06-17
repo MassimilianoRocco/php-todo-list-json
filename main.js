@@ -24,7 +24,12 @@ createApp({
         task.completed = !task.completed;
     },
     showModifyInput(){
-      this.modifyInputVisibility = !this.modifyInputVisibility;
+      setTimeout(() => {
+        this.modifyInputVisibility = !this.modifyInputVisibility;
+      }, 50);
+    },
+    modifyInputOFF(){
+      this.modifyInputVisibility = false;
     },
 
     //Metodo per settare il data indexToModify con l'indice effettivo della task, che verrà ripreso dalla funzione per modificare la task.

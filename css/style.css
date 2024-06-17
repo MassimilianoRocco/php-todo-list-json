@@ -30,6 +30,7 @@ header{
     height:400px;
     margin-left: 3rem;
     margin-top: 3rem;
+    position: relative;
 }
 .tasks_box{
     height: 100%;
@@ -37,7 +38,6 @@ header{
     color: white;
     border-radius: 10px;
     box-shadow: black 0 0 5px 5px ;
-    position: relative;
     }
 
 .list_box{

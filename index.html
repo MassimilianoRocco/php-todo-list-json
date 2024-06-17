@@ -24,7 +24,7 @@
             <div class="tasks_Container">
 
                 <!-- TASKS BOX -->
-                <div class="tasks_box">
+                <div @click="modifyInputOFF()" class="tasks_box">
                     <div :class="this.modifyInputVisibility ? 'opacity_mid list_box' : 'list_box'">
                         <h2>Tasks Manager:</h2>
                         <ul>
@@ -43,13 +43,12 @@
 
                         <!-- disabled="true" tra le proprietà per gestire con un if la possibilità di avere il pulsante add attivo o meno in base ai dati che l'utente inserisce -->
                     </div>
-
-                    <!-- MODIFY TASK -->
-                    <div class="abs_modify_box">
-                        <input type="text" v-model="modifyTaskText" @keyup.enter="modifyTask()" :class="this.modifyInputVisibility ? 'modifyInput display_On' : 'modifyInput display_Off' " name="modifyTask" placeholder="Write and press Enter to modify..." >
-                    </div>
                 </div>
-                
+
+                <!-- MODIFY TASK -->
+                <div class="abs_modify_box">
+                    <input type="text" v-model="modifyTaskText" @keyup.enter="modifyTask()" :class="this.modifyInputVisibility ? 'modifyInput display_On' : 'modifyInput display_Off' " v-on:blur="modifyInputOFF()" name="modifyTask" placeholder="Write and press Enter to modify..." >
+                </div>
             </div>
         </div>
 
