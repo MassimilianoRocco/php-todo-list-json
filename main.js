@@ -54,10 +54,10 @@ createApp({
       const index = { id: indexToCancel};
       axios.post(this.apiUrl, index, this.postRequestConfig).then(results => {
         console.log("Risultati: ", results.data);
-        // this.tasks = results.data;
+        this.tasks = results.data;
       });
 
-      this.getTaskList();
+      // this.getTaskList();
     },
 
     // MODIFY TASK FUNCTION 
@@ -68,13 +68,13 @@ createApp({
       };
       axios.post(this.apiUrl, index, this.postRequestConfig).then(results => {
         console.log("Risultati: ", results.data);
-        // this.tasks = results.data;
+        this.tasks = results.data;
       });
 
       this.modifyTaskText = "";
       this.modifyInputVisibility = false;
 
-      this.getTaskList();
+      // this.getTaskList();
     },
 
 
